@@ -1,0 +1,18 @@
+---
+globs: client/**/*.gd,client/**/*.tscn,client/**/*.tres,client/**/*.godot,client/**/*.cfg
+alwaysApply: false
+---
+
+# Godot client
+
+The client is a Godot 4.2+ project under `client/`. `client/project.godot` is the project file. The language is GDScript.
+
+- Add scripts as `.gd`, scenes as `.tscn`, and resources as `.tres` inside `client/`.
+- Type variables, parameters, and return values.
+- Indent with tabs.
+- Name files, functions, variables, and signals in `snake_case`.
+- Name classes declared with `class_name` in `PascalCase`.
+- Prefix private functions and variables with `_`.
+- Keep one primary responsibility per script, and attach it to the scene that owns that behavior.
+- Send player intent to the server. Authoritative outcomes stay on the server.
+- Read `shared/` before adding a message field or id.

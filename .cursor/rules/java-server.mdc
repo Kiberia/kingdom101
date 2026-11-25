@@ -1,0 +1,14 @@
+---
+globs: server/**/*.java,server/**/*.gradle,server/**/*.kts,server/**/pom.xml,server/**/*.properties
+alwaysApply: false
+---
+
+# Java server
+
+The server is Java under `server/`. It owns authoritative game state.
+
+- Put Java sources in `server/`. When you add Maven or Gradle, use that tool's standard source layout and commit its wrapper in `server/`.
+- Keep build files, wrapper scripts, and dependency declarations inside `server/`.
+- Validate client input at the boundary before it changes game state.
+- Read `shared/` before adding or renaming a message field or id.
+- Keep transport handling separate from game rules so rules can be tested without a live client.

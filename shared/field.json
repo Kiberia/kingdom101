@@ -1,0 +1,11 @@
+{
+  "minX": 0,
+  "maxX": 5,
+  "minY": -3,
+  "maxY": 3,
+  "radius": 0.05,
+  "step": 0.05,
+  "cell": 0.5,
+  "unitsPerPlayer": 4,
+  "stepMs": 100
+}

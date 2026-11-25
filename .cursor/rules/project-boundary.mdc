@@ -1,0 +1,30 @@
+---
+alwaysApply: true
+---
+
+# Kingdom101
+
+This repository is the whole project. Client and server live here together.
+
+- `client/` is the Godot 4.2+ game. Write it in GDScript.
+- `server/` is the game server. Write it in Java.
+- `shared/` holds contracts both sides use: message formats, ids, and shared constants.
+
+## Stay inside this repository
+
+The workspace root is the only place to read, search, list, or write project files.
+
+- Point every search, glob, and file read at this repository.
+- Run shell commands with this repository as the working directory.
+- Use basic OS-integrated tools already on `PATH` when a task needs them: shell builtins, `git`, `java`, and `javac`.
+- Keep source, assets, schemas, build scripts, and project config in this repository.
+- When a dependency or tool must be pinned, commit it here. A Gradle or Maven wrapper belongs under `server/`. Godot project files belong under `client/`.
+- If a needed tool is not on `PATH`, add a project-local way to run it. Do not walk the disk looking for an install.
+
+Do not search, scan, or open paths outside this repository. That includes the user profile, other projects, and OS system directories such as the Windows directory, `Program Files`, and `AppData`. Do not open them to find Godot, a JDK, sample code, or config.
+
+## Scope
+
+- The server owns authoritative game state. The client presents that state and sends player intent.
+- Change a shared contract in `shared/` first, then update `client/` and `server/` to match it.
+- Leave Godot import caches and export credentials untracked. The root `.gitignore` already lists them.
